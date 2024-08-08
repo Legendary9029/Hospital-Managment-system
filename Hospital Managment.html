@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Box at Top</title>
+    <style>
+        .top-box, .image-box {
+            width: 100%;
+            height: 100px; /* Adjust height as needed */
+            display: flex;
+            align-items: center;
+            position: fixed;
+            left: 0;
+            padding: 0 20px; /* Add padding to the sides */
+            box-sizing: border-box;
+            z-index: 1000; /* Ensures it stays on top */
+        }
+
+        .top-box {
+            background-color: purple;
+            color: white; /* Optional: text color */
+            top: 0;
+            justify-content: space-between;
+        }
+
+        .image-box {
+            top: 100px; /* Position it just below the purple box */
+            background-color: lightgray; /* Adjust background color if needed */
+            justify-content: flex-start; /* Align content to the left */
+        }
+
+        .emergency-number {
+            margin-left: auto;
+        }
+
+        body {
+            margin: 0;
+            padding-top: 200px; /* Adjust to avoid content being hidden behind the boxes */
+        }
+
+        .image-box img {
+            max-height: 100%; /* Ensure the image fits within the box height */
+        }
+    </style>
+</head>
+<body>
+<div class="top-box">
+    <span>This is a purple box at the top of the page.</span>
+    <span class="emergency-number">Emergency: 123-456-7890</span>
+</div>
+    <div class="image-box">
+        <img src="fsd1.jpg" alt="Description">
+    </div>
+<!-- Your page content starts here -->
+<div>
+    <p>Your main content goes here...</p>
+</div>
+</body>
+</html>
